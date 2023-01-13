@@ -105,16 +105,22 @@ fieldset {
     &:nth-child(1) {
       &::after {
         content: "Request";
+        top: 6px;
+        position: relative;
       }
     }
     &:nth-child(2) {
       &::after {
         content: "Validate";
+        top: 6px;
+        position: relative;
       }
     }
     &:nth-child(3) {
       &::after {
         content: "Reset";
+        top: 6px;
+        position: relative;
       }
     }
   }

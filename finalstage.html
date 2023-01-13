@@ -16,13 +16,13 @@
 
             <div class="reset-pass-journey border-center">
                 <span>
-                    <p class="circle reset-pass-journey__active">1</p>
+                    <p class="circle">1</p>
                 </span>
                 <span>
                     <p class="circle">2</p>
                 </span>
                 <span>
-                    <p class="circle">3</p>
+                    <p class="circle reset-pass-journey__active">3</p>
                 </span>
             </div>
 
@@ -30,13 +30,16 @@
 
             <form action="#" class="bp-login-form">
                 <fieldset>
-                    <div class="email">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="pwd">
+                    <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
+                    <div>
+                        <label for="pwd">Password</label>
+
+                        <input type="password" id="pwd" name="pwd">
+                        <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
                     </div>
-                    <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
-                        products.</p>
-                    <button>Send email</button>
+                    <button>Reset password</button>
                     <p>Cancel</p>
                 </fieldset>
             </form>

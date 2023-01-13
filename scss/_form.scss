@@ -1,0 +1,150 @@
+//resets
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.bp-login {
+  width: 50%;
+  color: #333333;
+  &__header {
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 81px;
+  }
+}
+
+.bp-login-form {
+  label {
+    display: block;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 14px 0;
+    position: absolute;
+    transition-property: color, top, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  input {
+    border: 1px solid #cccdcd;
+    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: -webkit-fill-available;
+  }
+
+  span {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: -47px;
+    right: 10px;
+  }
+
+  &__disclaimer {
+    color: #8d8e90;
+    line-height: 22px;
+    margin-top: 11px;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background: #c50084;
+    border-radius: 6px;
+    border: none;
+    display: inherit;
+    color: white;
+    padding: 12px 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.bp-login__forgotPass {
+  color: #2a6ebb;
+  text-decoration: none;
+}
+
+.focus {
+  margin-top: -11px;
+}
+
+.reset-password {
+  margin: 0 auto;
+  text-align: center;
+  width: 25%;
+
+  &__form-text {
+    margin-top: 53px;
+  }
+
+  button {
+    background-color: #2a6ebb;
+    margin: auto;
+  }
+}
+
+.reset-pass-journey {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 75%;
+
+  /*
+  p {
+    border-radius: 50%;
+    background-color: #d9d9da;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  */
+
+  span {
+    &:nth-child(1) {
+      &::after {
+        content: "Request";
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        content: "Validate";
+      }
+    }
+    &:nth-child(3) {
+      &::after {
+        content: "Reset";
+      }
+    }
+  }
+
+  &__active {
+    background-color: #333333 !important;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #d9d9da;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: auto;
+  width: max-content;
+}
+
+.border-center {
+  width: 100%;
+  position: relative;
+}
+
+.border-center:before {
+  content: "";
+  position: absolute;
+  bottom: 66%;
+  border-bottom: 5px #d9d9da solid;
+  width: 89%;
+  z-index: -1;
+  left: 17px;
+}

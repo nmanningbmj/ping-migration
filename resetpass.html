@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password journey</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="reset-password bp-login">
+            <h1 class="bp-login__header">Password Reset</h1>
+
+            <div class="reset-pass-journey border-center">
+                <span>
+                    <p class="circle reset-pass-journey__active">1</p>
+                </span>
+                <span>
+                    <p class="circle">2</p>
+                </span>
+                <span>
+                    <p class="circle">3</p>
+                </span>
+            </div>
+
+            <p class="reset-password__form-text">Enter your email to reset your password.</p>
+
+            <form action="#" class="bp-login-form">
+                <fieldset>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
+                        products.</p>
+                    <button>Send email</button>
+                    <p>Cancel</p>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

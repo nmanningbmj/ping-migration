@@ -3,8 +3,18 @@ fieldset {
   padding: 0;
 }
 
+.bp-logo {
+  margin-top: 60px;
+  width: 255px;
+}
+
+@media only screen and (max-width: 568px) {
+  .bp-logo {
+    width: auto;
+  }
+}
+
 .bp-login {
-  width: 50%;
   color: #333333;
 }
 
@@ -12,6 +22,55 @@ fieldset {
   font-size: 45px;
   font-weight: 400;
   margin-bottom: 81px;
+}
+
+.login-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.col-1 {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-1 {
+    width: auto;
+  }
+}
+
+.col-2 {
+  width: 50%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-2 {
+    width: auto;
+  }
+}
+
+.col-2 img {
+  width: 100%;
+  margin-top: 130px;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-2 img {
+    width: 370px;
+    margin-top: unset;
+    height: auto;
+  }
 }
 
 .bp-login-form label {
@@ -74,7 +133,12 @@ fieldset {
 .reset-password {
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .reset-password {
+    width: 50%;
+  }
 }
 
 .reset-password__form-text {

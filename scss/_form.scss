@@ -5,13 +5,51 @@ fieldset {
   padding: 0;
 }
 
+.bp-logo {
+  margin-top: 60px;
+  width: 255px;
+  @media only screen and (max-width: 568px) {
+    width: auto;
+  }
+}
+
 .bp-login {
-  width: 50%;
   color: #333333;
   &__header {
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 81px;
+  }
+}
+
+.login-wrapper {
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.col-1 {
+  @media only screen and (max-width: 768px) {
+    width: auto;
+  }
+  width: 50%;
+}
+.col-2 {
+  @media only screen and (max-width: 768px) {
+    width: auto;
+  }
+  width: 50%;
+  margin: auto;
+
+  img {
+    width: 100%;
+    margin-top: 130px;
+    @media only screen and (min-width: 768px) {
+      width: 370px;
+      margin-top: unset;
+      height: auto;
+    }
   }
 }
 
@@ -73,7 +111,9 @@ fieldset {
 .reset-password {
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+  }
 
   &__form-text {
     margin-top: 53px;

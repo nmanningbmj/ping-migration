@@ -31,7 +31,7 @@ fieldset {
 .bp-login-form input {
   border: 1px solid #cccdcd;
   border-radius: 3px;
-  padding: 12px;
+  padding: 22px 5px 3px 10px;
   margin-bottom: 20px;
   width: -webkit-fill-available;
 }
@@ -74,7 +74,7 @@ fieldset {
 .reset-password {
   margin: 0 auto;
   text-align: center;
-  width: 25%;
+  width: 50%;
 }
 
 .reset-password__form-text {

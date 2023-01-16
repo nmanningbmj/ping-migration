@@ -28,11 +28,12 @@
 
             <p class="reset-password__form-text">Enter your email to reset your password.</p>
 
-            <form action="#" class="bp-login-form">
+            <form action="#" class="bp-login-form" id="sendEmailLink">
                 <fieldset>
-                    <div class="email">
+                    <div class="form-field">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
+                        <small></small>
                     </div>
                     <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
                         products.</p>
@@ -45,7 +46,7 @@
         <a class="bp-login__forgotPass" href="validate.html">go to second step (validate)</a>
     </div>
 
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
 </body>
 
 </html>

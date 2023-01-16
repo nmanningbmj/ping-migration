@@ -16,17 +16,21 @@
             <p class="bp-login__desc">If you have a Best Practice personal account, your own subscription or have
                 registered for a free trial, log in here: </p>
 
-            <form action="#" class="bp-login-form">
+            <form action="#" class="bp-login-form" id="signIn">
                 <fieldset>
 
-                    <div class="email">
+                    <div class="form-field">
                         <label for="email">Email</label>
                         <input class=" email" id="email" name="email">
+                        <small></small>
                     </div>
 
-                    <label for="pwd">Password</label>
-                    <input type="password" id="pwd" name="pwd">
-                    <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
+                        <small></small>
+                    </div>
 
                     <a class="bp-login__forgotPass" href="resetpass.html">Forgot password?</a>
 

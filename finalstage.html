@@ -26,26 +26,35 @@
                 </span>
             </div>
 
-            <p class="reset-password__form-text">Enter your email to reset your password.</p>
+            <div class="reset-password__form-text">
+                <p>Choose a new passsword to access your BMJ account.</p>
+                <p>Your password musts be at least 8 characters and include atleast one number.</p>
 
-            <form action="#" class="bp-login-form">
+            </div>
+
+            <form action="#" class="bp-login-form step3">
                 <fieldset>
-                    <label for="pwd">Password</label>
-                    <input type="password" id="pwd" name="pwd">
-                    <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
                     <div>
-                        <label for="pwd">Password</label>
-
+                        <label for="pwd">New password</label>
                         <input type="password" id="pwd" name="pwd">
-                        <span><img src="images/visibility_off.svg" class="visibility-icon" alt="hide password"></span>
+                        <span><img src="images/visibility_off.svg" id="visibility-icon" class="visibility-icon"
+                                alt="hide password"></span>
                     </div>
+
+                    <div>
+                        <label for="pwd">Confirm password</label>
+                        <input type="password" id="SecondPwd" name="pwd">
+                        <span><img src="images/visibility_off.svg" id="confirm" class="visibility-icon"
+                                alt="hide password"></span>
+                    </div>
+
                     <button>Reset password</button>
                     <p>Cancel</p>
                 </fieldset>
             </form>
         </div>
 
-        <a class="bp-login__forgotPass" href="validate.html">go to second step (validate)</a>
+        <a class="bp-login__forgotPass" href="index.html">go to first step (login page)</a>
     </div>
 
     <script src="index.js"></script>

@@ -79,6 +79,7 @@ fieldset {
 
 .reset-password__form-text {
   margin-top: 53px;
+  line-height: 22px;
 }
 
 .reset-password button {
@@ -153,6 +154,18 @@ fieldset {
   width: 89%;
   z-index: -1;
   left: 17px;
+}
+
+.step3 input {
+  margin-bottom: 0px;
+}
+
+.step3 button {
+  margin-top: 23px;
+}
+
+.step3 span {
+  top: -28px;
 }
 
 body {

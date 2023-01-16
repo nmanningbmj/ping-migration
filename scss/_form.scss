@@ -77,6 +77,7 @@ fieldset {
 
   &__form-text {
     margin-top: 53px;
+    line-height: 22px;
   }
 
   button {
@@ -153,4 +154,17 @@ fieldset {
   width: 89%;
   z-index: -1;
   left: 17px;
+}
+
+.step3 {
+  input {
+    margin-bottom: 0px;
+  }
+
+  button {
+    margin-top: 23px;
+  }
+  span {
+    top: -28px;
+  }
 }

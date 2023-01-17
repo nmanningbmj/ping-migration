@@ -1,13 +1,4 @@
-const icon = document.querySelector(".visibility-icon");
-const img = document.querySelector(".visibility-icon");
-
-const inputPass = document.querySelector("#password");
-let labels = document.querySelector("label");
 const formFields = document.querySelectorAll("input");
-const email = document.querySelector("#email");
-
-const confirm = document.getElementById("confirm");
-const secondPass = document.getElementById("SecondPwd");
 
 formFields.forEach((i) => {
   i.addEventListener("focus", function () {
@@ -25,16 +16,20 @@ formFields.forEach((i) => {
   });
 });
 
+// Form validation
+
 const loginForm = document.querySelector("#signIn");
 const sendEmail = document.querySelector("#sendEmailLink");
 const updatePassword = document.querySelector("#updatePassword");
 const emailEl = document.querySelector("#email");
 const passwordEl = document.querySelector("#password");
 const confirmPasswordEl = document.querySelector("#SecondPwd");
+const errorIcon = document.getElementById("#error-icon");
 
-const checkEmail = () => {
+const validateEmail = () => {
   let valid = false;
   const email = emailEl.value.trim();
+
   if (!isRequired(email)) {
     showError(emailEl, "Email cannot be blank.");
   } else if (!isEmailValid(email)) {
@@ -46,9 +41,8 @@ const checkEmail = () => {
   return valid;
 };
 
-const checkPassword = () => {
+const validatePassword = () => {
   let valid = false;
-
   const password = passwordEl.value.trim();
 
   if (!isRequired(password)) {
@@ -62,13 +56,13 @@ const checkPassword = () => {
 
 const checkConfirmPassword = () => {
   let valid = false;
-
   const password = passwordEl.value.trim();
   const confirmedPassword = confirmPasswordEl.value.trim();
 
   if (!isRequired(password)) {
     showError(passwordEl, "Password cannot be blank.");
-  } else if (!isPasswordSecure(password)) {
+    showError(confirmPasswordEl, "Password cannot be blank.");
+  } else if (!isPasswordValidated(password)) {
     showError(
       passwordEl,
       "Password must has at least 8 characters that includes one number"
@@ -77,13 +71,15 @@ const checkConfirmPassword = () => {
       confirmPasswordEl,
       "Password must has at least 8 characters that includes one number"
     );
+  } else if (!hasNumber(password)) {
+    showError(passwordEl, "Password must contain atleast one number");
+    showError(confirmPasswordEl, "Password must contain atleast one number");
   } else if (password !== confirmedPassword) {
-    showError(passwordEl, "passwords do not match");
-    showError(confirmPasswordEl, "passwords do not match");
+    showError(passwordEl, "Passwords do not match");
+    showError(confirmPasswordEl, "Passwords do not match");
   } else {
     showSuccess(passwordEl, "");
     showSuccess(confirmPasswordEl, "");
-
     valid = true;
   }
   return valid;
@@ -95,14 +91,17 @@ const isEmailValid = (email) => {
   return reg.test(email);
 };
 
-const isPasswordSecure = (password) => {
+const isPasswordValidated = (password) => {
   const re = new RegExp(/^(?=.*d).{8,}$/);
   return re.test(password);
 };
 
-const isRequired = (value) => (value === "" ? false : true);
+const hasNumber = (password) => {
+  const number = /\d/;
+  return number.test(password);
+};
 
-const errorIcon = document.getElementById("#error-icon");
+const isRequired = (value) => (value === "" ? false : true);
 
 const showError = (input, message) => {
   const formField = input.parentElement;
@@ -117,23 +116,21 @@ const showError = (input, message) => {
 };
 
 const showSuccess = (input) => {
-  // get the form-field element
   const formField = input.parentElement;
-
-  // remove the error class
   formField.classList.remove("error");
 
-  // hide the error message
   const error = formField.querySelector("small");
   error.textContent = "";
+
+  error.classList.remove("error-icon");
 };
 
 //first step login page
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    let isEmailValid = checkEmail(),
-      isPasswordValid = checkPassword();
+    let isEmailValid = validateEmail(),
+      isPasswordValid = validatePassword();
     let isFormValid = isEmailValid && isPasswordValid;
     if (isFormValid) {
       console.log("valid");
@@ -141,11 +138,11 @@ if (loginForm) {
   });
 }
 
-//second step login page
+//second step send email verification page
 if (sendEmail) {
   sendEmail.addEventListener("submit", function (e) {
     e.preventDefault();
-    let isValid = checkEmail();
+    let isValid = validateEmail();
     let isFormValid = isValid;
     if (isFormValid) {
       console.log("valid");
@@ -157,22 +154,27 @@ if (sendEmail) {
 if (updatePassword) {
   updatePassword.addEventListener("submit", function (e) {
     e.preventDefault();
-    let isEmailValid = checkConfirmPassword();
-    let isFormValid = isEmailValid;
+    let isValid = checkConfirmPassword();
+    let isFormValid = isValid;
     if (isFormValid) {
       console.log("valid");
     }
   });
 }
 
+const confirm = document.getElementById("confirm");
+const secondPass = document.getElementById("SecondPwd");
+const icon = document.querySelector(".visibility-icon");
+const inputPass = document.querySelector("#password");
+
 icon.addEventListener("click", function () {
   if (inputPass.type === "password") {
-    img.src = "images/visibility_on.svg";
-    img.alt = "show password";
+    icon.src = "images/visibility_on.svg";
+    icon.alt = "show password";
     inputPass.type = "text";
   } else {
-    img.src = "images/visibility_off.svg";
-    img.alt = "hide password";
+    icon.src = "images/visibility_off.svg";
+    icon.alt = "hide password";
     inputPass.type = "password";
   }
 });

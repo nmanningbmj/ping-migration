@@ -227,9 +227,9 @@ small {
   width: 89%;
   z-index: -1;
   left: 17px;
-  @media only screen and (min-width: 768px) {
+  @include ie-only() {
     width: 75%;
-    left: 55px;
+    left: 50px;
   }
 }
 

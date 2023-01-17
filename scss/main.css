@@ -270,10 +270,10 @@ small {
   left: 17px;
 }
 
-@media only screen and (min-width: 768px) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .border-center:before {
     width: 75%;
-    left: 55px;
+    left: 50px;
   }
 }
 

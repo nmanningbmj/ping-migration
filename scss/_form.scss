@@ -24,8 +24,10 @@ fieldset {
 
 .login-wrapper {
   display: flex;
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
+  flex-direction: column;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    column-gap: 50px;
   }
 }
 
@@ -47,15 +49,24 @@ fieldset {
     margin-top: 130px;
     @media only screen and (min-width: 768px) {
       width: 370px;
-      margin-top: unset;
+      margin-top: 3rem;
       height: auto;
     }
   }
 }
 
+small {
+  color: #cd202c;
+  font-weight: 700;
+  font-size: 1rem;
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
 .bp-login-form {
   label {
-    display: block;
     font-size: 14px;
     margin-left: 10px;
     padding: 14px 0;
@@ -70,6 +81,13 @@ fieldset {
     padding: 22px 5px 3px 10px;
     margin-bottom: 20px;
     width: -webkit-fill-available;
+    outline: none;
+    &:focus {
+      border: 2px solid #2a6ebb !important;
+    }
+    &:hover {
+      border-bottom: 2px solid #cccdcd;
+    }
   }
 
   span {
@@ -193,6 +211,9 @@ fieldset {
   width: 89%;
   z-index: -1;
   left: 17px;
+  @media only screen and (min-width: 768px) {
+    width: 93%;
+  }
 }
 
 .step3 {
@@ -203,7 +224,25 @@ fieldset {
   button {
     margin-top: 23px;
   }
+
   span {
     top: -28px;
   }
+
+  small {
+    position: relative;
+    bottom: -11px;
+    padding-bottom: 8px;
+  }
+}
+
+.error-icon {
+  background-image: url(/images/error-icon.svg);
+  background-repeat: no-repeat;
+  margin-left: 11px;
+  width: auto;
+}
+
+small.error-icon {
+  padding-left: 25px;
 }

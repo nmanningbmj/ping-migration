@@ -28,14 +28,20 @@ fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .login-wrapper {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
   }
 }
 
@@ -68,13 +74,22 @@ fieldset {
 @media only screen and (min-width: 768px) {
   .col-2 img {
     width: 370px;
-    margin-top: unset;
+    margin-top: 3rem;
     height: auto;
   }
 }
 
-.bp-login-form label {
+small {
+  color: #cd202c;
+  font-weight: 700;
+  font-size: 1rem;
   display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.bp-login-form label {
   font-size: 14px;
   margin-left: 10px;
   padding: 14px 0;
@@ -93,6 +108,15 @@ fieldset {
   padding: 22px 5px 3px 10px;
   margin-bottom: 20px;
   width: -webkit-fill-available;
+  outline: none;
+}
+
+.bp-login-form input:focus {
+  border: 2px solid #2a6ebb !important;
+}
+
+.bp-login-form input:hover {
+  border-bottom: 2px solid #cccdcd;
 }
 
 .bp-login-form span {
@@ -220,6 +244,12 @@ fieldset {
   left: 17px;
 }
 
+@media only screen and (min-width: 768px) {
+  .border-center:before {
+    width: 93%;
+  }
+}
+
 .step3 input {
   margin-bottom: 0px;
 }
@@ -230,6 +260,23 @@ fieldset {
 
 .step3 span {
   top: -28px;
+}
+
+.step3 small {
+  position: relative;
+  bottom: -11px;
+  padding-bottom: 8px;
+}
+
+.error-icon {
+  background-image: url(/images/error-icon.svg);
+  background-repeat: no-repeat;
+  margin-left: 11px;
+  width: auto;
+}
+
+small.error-icon {
+  padding-left: 25px;
 }
 
 body {

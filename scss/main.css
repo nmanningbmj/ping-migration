@@ -273,7 +273,7 @@ small {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .border-center:before {
     width: 75%;
-    left: 50px;
+    left: 56px;
   }
 }
 

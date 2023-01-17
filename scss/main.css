@@ -111,6 +111,12 @@ small {
   outline: none;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .bp-login-form input {
+    width: 100%;
+  }
+}
+
 .bp-login-form input:focus {
   border: 2px solid #2a6ebb !important;
 }
@@ -195,6 +201,20 @@ small {
   width: 75%;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .reset-pass-journey {
+    width: 100%;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .reset-pass-journey span {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 .reset-pass-journey span:nth-child(1)::after {
   content: "Request";
   top: 6px;
@@ -229,6 +249,12 @@ small {
   width: max-content;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .circle {
+    width: 15px;
+  }
+}
+
 .border-center {
   width: 100%;
   position: relative;
@@ -246,7 +272,8 @@ small {
 
 @media only screen and (min-width: 768px) {
   .border-center:before {
-    width: 93%;
+    width: 75%;
+    left: 55px;
   }
 }
 

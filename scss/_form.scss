@@ -149,6 +149,11 @@ small {
 .reset-password {
   margin: 0 auto;
   text-align: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 70%;
+  }
+
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     width: 50%;
   }
@@ -286,8 +291,5 @@ small.error-icon {
 }
 
 .visibility-hidden {
-  span {
-    color: #fff;
-    padding-left: 200px;
-  }
+  color: #fff;
 }

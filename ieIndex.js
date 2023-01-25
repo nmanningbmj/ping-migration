@@ -100,6 +100,8 @@ var showError = function showError(input, message) {
   formField.classList.add("error");
   var error = formField.querySelector("small");
   error.textContent = message;
+  error.ariaLabel = message;
+
   if (formField.classList.contains("error")) {
     error.classList.add("error-icon");
   }
@@ -109,13 +111,13 @@ var showSuccess = function showSuccess(input) {
   formField.classList.remove("error");
   var error = formField.querySelector("small");
   error.textContent = "";
+  error.ariaLabel = "";
   error.classList.remove("error-icon");
 };
 
 //first step login page
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
-    e.returnValue = false;
     e.preventDefault();
 
     var isEmailValid = validateEmail(),

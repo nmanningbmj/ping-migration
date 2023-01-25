@@ -10,43 +10,44 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="reset-password bp-login">
-            <img src="images/BMJ.svg" class="reset-password__logo" alt="bmj logo" height="103" width="62">
-            <h1 class="bp-login__header">Password Reset</h1>
+    <main>
+        <div class="container">
+            <div class="reset-password bp-login">
+                <img src="images/BMJ.svg" class="reset-password__logo" alt="bmj logo" height="103" width="62">
+                <h1 class="bp-login__header">Password Reset</h1>
 
-            <div class="reset-pass-journey border-center">
-                <span>
-                    <p class="circle reset-pass-journey__active">1</p>
-                </span>
-                <span>
-                    <p class="circle">2</p>
-                </span>
-                <span>
-                    <p class="circle">3</p>
-                </span>
+                <div class="reset-pass-journey border-center">
+                    <span>
+                        <p class="circle reset-pass-journey__active">1</p>
+                    </span>
+                    <span>
+                        <p class="circle">2</p>
+                    </span>
+                    <span>
+                        <p class="circle">3</p>
+                    </span>
+                </div>
+
+                <p class="reset-password__form-text">Enter your email to reset your password.</p>
+
+                <form action="#" class="bp-login-form" id="sendEmailLink">
+                    <fieldset>
+                        <div class="form-field">
+                            <small></small>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
+                            products.</p>
+                        <button>Send email</button>
+                        <p>Cancel</p>
+                    </fieldset>
+                </form>
             </div>
 
-            <p class="reset-password__form-text">Enter your email to reset your password.</p>
-
-            <form action="#" class="bp-login-form" id="sendEmailLink">
-                <fieldset>
-                    <div class="form-field">
-                        <small></small>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
-                        products.</p>
-                    <button>Send email</button>
-                    <p>Cancel</p>
-                </fieldset>
-            </form>
+            <a class="bp-login__forgotPass" href="step2.html">go to second step (validate)</a>
         </div>
-
-        <a class="bp-login__forgotPass" href="step2.html">go to second step (validate)</a>
-    </div>
-
+    </main>
     <script defer src="ieIndex.js"></script>
 </body>
 

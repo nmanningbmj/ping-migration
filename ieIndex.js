@@ -95,17 +95,22 @@ var hasNumber = function hasNumber(password) {
 var isRequired = function isRequired(value) {
   return value === "" ? false : true;
 };
+
 var showError = function showError(input, message) {
   var formField = input.parentElement;
   formField.classList.add("error");
+
   var error = formField.querySelector("small");
+
   error.textContent = message;
   error.ariaLabel = message;
+  error.setAttribute("role", "alert");
 
   if (formField.classList.contains("error")) {
     error.classList.add("error-icon");
   }
 };
+
 var showSuccess = function showSuccess(input) {
   var formField = input.parentElement;
   formField.classList.remove("error");

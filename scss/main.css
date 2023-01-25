@@ -24,6 +24,12 @@ fieldset {
   margin-bottom: 81px;
 }
 
+.bp-login__header--reset {
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 61px;
+}
+
 .login-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +77,15 @@ fieldset {
   margin-top: 130px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+  .col-2 img {
+    width: 370px;
+    margin-top: 3rem;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
   .col-2 img {
     height: 414px;
     width: 516px;
@@ -122,7 +136,8 @@ small {
 }
 
 .bp-login-form input:hover {
-  border-bottom: 2px solid #cccdcd;
+  -webkit-box-shadow: 0 2px 0 #cccdcd;
+          box-shadow: 0 2px 0 #cccdcd;
 }
 
 .bp-login-form span {
@@ -166,9 +181,15 @@ small {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .reset-password {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .reset-password {
+    width: 35%;
   }
 }
 
@@ -179,6 +200,7 @@ small {
 .reset-password__logo {
   height: auto;
   margin-bottom: 17px;
+  margin-top: 103px;
 }
 
 .reset-password__form-text {
@@ -257,7 +279,7 @@ small {
 }
 
 .border-center {
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 
@@ -307,6 +329,11 @@ small.error-icon {
   padding-left: 25px;
 }
 
+.visibility-hidden span {
+  color: #fff;
+  padding-left: 200px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -314,6 +341,6 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -14,8 +14,9 @@
         <div class="container">
             <div class="reset-password bp-login">
                 <img src="images/BMJ.svg" class="reset-password__logo" alt="bmj logo" height="103" width="62">
-                <h1 class="bp-login__header">Password Reset</h1>
+                <h1 class="bp-login__header--reset">Password Reset</h1>
 
+                <div class="visibility-hidden">Step 1: Request</div>
                 <div class="reset-pass-journey border-center">
                     <span>
                         <p class="circle reset-pass-journey__active">1</p>
@@ -30,14 +31,15 @@
 
                 <p class="reset-password__form-text">Enter your email to reset your password.</p>
 
-                <form action="#" class="bp-login-form" id="sendEmailLink">
+                <form action="#" class="bp-login-form" id="sendEmailLink" novalidate>
                     <fieldset>
                         <div class="form-field">
                             <small></small>
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email">
                         </div>
-                        <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple BMJ
+                        <p class="bp-login-form__disclaimer">Please note: this may affect your password for multiple
+                            BMJ
                             products.</p>
                         <button>Send email</button>
                         <p>Cancel</p>

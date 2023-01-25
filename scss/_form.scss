@@ -19,6 +19,11 @@ fieldset {
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 81px;
+    &--reset {
+      font-size: 45px;
+      font-weight: 400;
+      margin-bottom: 61px;
+    }
   }
 }
 
@@ -37,6 +42,7 @@ fieldset {
   }
   width: 50%;
 }
+
 .col-2 {
   @media only screen and (max-width: 768px) {
     width: auto;
@@ -47,7 +53,14 @@ fieldset {
   img {
     width: 100%;
     margin-top: 130px;
-    @media only screen and (min-width: 768px) {
+
+    @media only screen and (min-width: 768px) and (max-width: 1500px) {
+      width: 370px;
+      margin-top: 3rem;
+      height: auto;
+    }
+
+    @media only screen and (min-width: 1500px) {
       height: 414px;
       width: 516px;
       margin-top: 3rem;
@@ -91,7 +104,8 @@ small {
       border: 2px solid #2a6ebb !important;
     }
     &:hover {
-      border-bottom: 2px solid #cccdcd;
+      //border-bottom: 2px solid #cccdcd;
+      box-shadow: 0 2px 0 #cccdcd;
     }
   }
 
@@ -135,8 +149,12 @@ small {
 .reset-password {
   margin: 0 auto;
   text-align: center;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
     width: 50%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 35%;
   }
 
   h1 {
@@ -146,6 +164,8 @@ small {
   &__logo {
     height: auto;
     margin-bottom: 17px;
+
+    margin-top: 103px;
   }
 
   &__form-text {
@@ -216,7 +236,7 @@ small {
 }
 
 .border-center {
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 
@@ -263,4 +283,11 @@ small {
 
 small.error-icon {
   padding-left: 25px;
+}
+
+.visibility-hidden {
+  span {
+    color: #fff;
+    padding-left: 200px;
+  }
 }

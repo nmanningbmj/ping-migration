@@ -6,11 +6,11 @@ clone this project and open index.html with your browser or live server
 
 ## Using these files
 
-Take main.css for styles
-index.html for login page and reset password link
-step1: enter email for verification link
-step2: automated message from email
-step3: create new password and confirm
+Take main.css for styles<br />
+index.html for login page and reset password link<br />
+step1: enter email for verification link<br />
+step2: automated message from email<br />
+step3: create new password and confirm<br />
 
 ## Support
 

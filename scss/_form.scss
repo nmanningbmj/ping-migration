@@ -124,7 +124,7 @@ small {
     margin-bottom: 2rem;
   }
 
-  button {
+  &__button {
     color: white;
     background: #c50084;
     border-radius: 6px;
@@ -264,7 +264,7 @@ small {
     margin-bottom: 0px;
   }
 
-  button {
+  .bp-login-form__button {
     margin-top: 23px;
   }
 
@@ -292,4 +292,9 @@ small.error-icon {
 
 .visibility-hidden {
   color: #fff;
+}
+
+.visibility-btn {
+  background: none !important;
+  border: none;
 }

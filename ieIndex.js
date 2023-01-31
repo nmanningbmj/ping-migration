@@ -157,11 +157,34 @@ if (updatePassword) {
     }
   });
 }
+
 var confirm = document.getElementById("confirm");
 var secondPass = document.getElementById("SecondPwd");
+var iconBtn = document.querySelectorAll("#iconBtn");
+var iconBtnSecond = document.querySelector("#iconBtnSecond");
 var icon = document.querySelector(".visibility-icon");
 var inputPass = document.querySelector("#password");
+
 icon.addEventListener("click", function () {
+  handler();
+});
+
+for (i = 0; i < icon.length; i++) {
+  icon[i].addEventListener("click", function () {
+    handler();
+  });
+}
+
+for (i = 0; i < iconBtn.length; i++) {
+  iconBtn[i].addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      console.log("enter");
+      handler();
+    }
+  });
+}
+
+function handler() {
   if (inputPass.type === "password") {
     icon.src = "images/visibility_on.svg";
     icon.alt = "show password";
@@ -171,17 +194,29 @@ icon.addEventListener("click", function () {
     icon.alt = "hide password";
     inputPass.type = "password";
   }
-});
+}
+
 if (confirm) {
   confirm.addEventListener("click", function () {
-    if (secondPass.type === "password") {
-      confirm.src = "images/visibility_on.svg";
-      confirm.alt = "show password";
-      secondPass.type = "text";
-    } else {
-      confirm.src = "images/visibility_off.svg";
-      confirm.alt = "hide password";
-      secondPass.type = "password";
-    }
+    secondInputPass();
   });
+}
+
+iconBtnSecond.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    console.log("enter");
+    secondInputPass();
+  }
+});
+
+function secondInputPass() {
+  if (secondPass.type === "password") {
+    confirm.src = "images/visibility_on.svg";
+    confirm.alt = "show password";
+    secondPass.type = "text";
+  } else {
+    confirm.src = "images/visibility_off.svg";
+    confirm.alt = "hide password";
+    secondPass.type = "password";
+  }
 }

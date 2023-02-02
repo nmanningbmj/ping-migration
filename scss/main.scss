@@ -15,4 +15,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  @include ie-only() {
+    display: none;
+  }
 }

@@ -17,7 +17,6 @@ for (i = 0; i < formFields.length; i++) {
 }
 
 // Form validation
-
 var loginForm = document.querySelector("#signIn");
 var sendEmail = document.querySelector("#sendEmailLink");
 var updatePassword = document.querySelector("#updatePassword");
@@ -39,6 +38,7 @@ var validateEmail = function validateEmail() {
   }
   return valid;
 };
+
 var validatePassword = function validatePassword() {
   var valid = false;
   var password = passwordEl.value.trim();
@@ -50,6 +50,7 @@ var validatePassword = function validatePassword() {
   }
   return valid;
 };
+
 var checkConfirmPassword = function checkConfirmPassword() {
   var valid = false;
   var password = passwordEl.value.trim();
@@ -79,6 +80,7 @@ var checkConfirmPassword = function checkConfirmPassword() {
   }
   return valid;
 };
+
 var isEmailValid = function isEmailValid(email) {
   var reg =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -160,31 +162,37 @@ if (updatePassword) {
 
 var confirm = document.getElementById("confirm");
 var secondPass = document.getElementById("SecondPwd");
+var icon = document.querySelector(".visibility-icon");
 var iconBtn = document.querySelectorAll("#iconBtn");
 var iconBtnSecond = document.querySelector("#iconBtnSecond");
-var icon = document.querySelector(".visibility-icon");
 var inputPass = document.querySelector("#password");
 
 icon.addEventListener("click", function () {
-  handler();
+  visibilityIcon();
 });
-
-for (i = 0; i < icon.length; i++) {
-  icon[i].addEventListener("click", function () {
-    handler();
-  });
-}
 
 for (i = 0; i < iconBtn.length; i++) {
   iconBtn[i].addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      console.log("enter");
-      handler();
+      visibilityIcon();
     }
   });
 }
 
-function handler() {
+if (confirm) {
+  confirm.addEventListener("click", function () {
+    secondInputPass();
+  });
+
+  iconBtnSecond.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      console.log("enter");
+      secondInputPass();
+    }
+  });
+}
+
+function visibilityIcon() {
   if (inputPass.type === "password") {
     icon.src = "images/visibility_on.svg";
     icon.alt = "show password";
@@ -195,19 +203,6 @@ function handler() {
     inputPass.type = "password";
   }
 }
-
-if (confirm) {
-  confirm.addEventListener("click", function () {
-    secondInputPass();
-  });
-}
-
-iconBtnSecond.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    console.log("enter");
-    secondInputPass();
-  }
-});
 
 function secondInputPass() {
   if (secondPass.type === "password") {

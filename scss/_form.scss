@@ -30,6 +30,7 @@ fieldset {
 .login-wrapper {
   display: flex;
   flex-direction: column;
+
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     column-gap: 50px;
@@ -64,6 +65,11 @@ fieldset {
       height: 414px;
       width: 516px;
       margin-top: 3rem;
+    }
+
+    @include ie-only() {
+      display: block;
+      margin: 120px auto;
     }
   }
 }
@@ -104,7 +110,6 @@ small {
       border: 2px solid #2a6ebb !important;
     }
     &:hover {
-      //border-bottom: 2px solid #cccdcd;
       box-shadow: 0 2px 0 #cccdcd;
     }
   }
@@ -142,10 +147,6 @@ small {
   text-decoration: none;
 }
 
-.focus {
-  margin-top: -11px;
-}
-
 .reset-password {
   margin: 0 auto;
   text-align: center;
@@ -169,7 +170,6 @@ small {
   &__logo {
     height: auto;
     margin-bottom: 17px;
-
     margin-top: 103px;
   }
 
@@ -236,13 +236,17 @@ small {
   width: max-content;
 
   @include ie-only() {
-    width: 15px;
+    width: 9px;
   }
 }
 
 .border-center {
   width: 90%;
   position: relative;
+
+  @include ie-only() {
+    width: 100%;
+  }
 }
 
 .border-center:before {
@@ -254,7 +258,7 @@ small {
   z-index: -1;
   left: 17px;
   @include ie-only() {
-    width: 75%;
+    width: 70%;
     left: 56px;
   }
 }
@@ -279,11 +283,16 @@ small {
   }
 }
 
+//Class's for dom manipulation
 .error-icon {
   background-image: url(/images/error-icon.svg);
   background-repeat: no-repeat;
   margin-left: 11px;
   width: auto;
+}
+
+.focus {
+  margin-top: -11px;
 }
 
 small.error-icon {

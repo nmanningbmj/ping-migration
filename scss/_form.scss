@@ -307,3 +307,11 @@ small.error-icon {
   background: none !important;
   border: none;
 }
+
+.form-field {
+  position: relative;
+}
+
+.bp-login-form label {
+  left: 0;
+}

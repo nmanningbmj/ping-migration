@@ -357,6 +357,14 @@ small.error-icon {
   border: none;
 }
 
+.form-field {
+  position: relative;
+}
+
+.bp-login-form label {
+  left: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

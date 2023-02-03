@@ -25,18 +25,21 @@
                         <fieldset>
 
                             <div class="form-field">
-                                <small></small>
+                                <small id="error1"></small>
                                 <label for="email">Email</label>
                                 <input class=" email" id="email" name="email">
                             </div>
 
                             <div class="form-field">
-                                <small></small>
-                                <label for="password">Password</label>
+                                <small id="error2"></small>
+                                <label for=" password">Password</label>
                                 <input type="password" id="password" name="password">
                                 <span><button type="button" id="iconBtn"><img src="images/visibility_off.svg"
                                             class="visibility-icon" alt="hide password"></button></span>
                             </div>
+
+
+                            <div class="visibility-hidden"></div>
 
                             <a class="bp-login__forgotPass" href="step1.html">Forgot password?</a>
 
@@ -44,9 +47,13 @@
                             <a style="display: block;" class="bp-login__forgotPass" href="email.html">html email</a>
 
 
-                            <button class="bp-login-form__button">log in</button>
+                            <button class="bp-login-form__button" id="formButton">log in</button>
                         </fieldset>
+                        <div id="accessValidation" class="visibility-hidden-form" role="alert">
+                        </div>
                     </form>
+
+
                 </div>
 
                 <div class="col-2">

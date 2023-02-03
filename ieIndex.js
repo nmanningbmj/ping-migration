@@ -105,12 +105,18 @@ var showError = function showError(input, message) {
   var error = formField.querySelector("small");
 
   error.textContent = message;
-  error.ariaLabel = message;
-  error.setAttribute("role", "alert");
 
   if (formField.classList.contains("error")) {
     error.classList.add("error-icon");
   }
+
+  const accessValidation = document.getElementById("accessValidation");
+
+  const fragment = document.createDocumentFragment();
+  const li = fragment.appendChild(document.createElement("li"));
+  li.innerHTML = message;
+
+  accessValidation.appendChild(fragment);
 };
 
 var showSuccess = function showSuccess(input) {
@@ -118,7 +124,6 @@ var showSuccess = function showSuccess(input) {
   formField.classList.remove("error");
   var error = formField.querySelector("small");
   error.textContent = "";
-  error.ariaLabel = "";
   error.classList.remove("error-icon");
 };
 
@@ -126,6 +131,11 @@ var showSuccess = function showSuccess(input) {
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    var accessValidation = document.getElementById("accessValidation");
+    if (accessValidation.childNodes.length > 0) {
+      accessValidation.innerHTML = "";
+    }
 
     var isEmailValid = validateEmail(),
       isPasswordValid = validatePassword();
@@ -140,6 +150,12 @@ if (loginForm) {
 if (sendEmail) {
   sendEmail.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    var accessValidation = document.getElementById("accessValidation");
+    if (accessValidation.childNodes.length > 0) {
+      accessValidation.innerHTML = "";
+    }
+
     var isValid = validateEmail();
     var isFormValid = isValid;
     if (isFormValid) {
@@ -152,6 +168,12 @@ if (sendEmail) {
 if (updatePassword) {
   updatePassword.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    var accessValidation = document.getElementById("accessValidation");
+    if (accessValidation.childNodes.length > 0) {
+      accessValidation.innerHTML = "";
+    }
+
     var isValid = checkConfirmPassword();
     var isFormValid = isValid;
     if (isFormValid) {
@@ -192,6 +214,12 @@ if (confirm) {
   });
 }
 
+var isMobileVersion = document.getElementsByClassName("accessi");
+
+// if 'hasClass' is exist on 'mydivclass'
+if (isMobileVersion.length > 0) {
+  console.log("test");
+}
 function visibilityIcon() {
   if (inputPass.type === "password") {
     icon.src = "images/visibility_on.svg";

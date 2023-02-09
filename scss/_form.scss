@@ -19,8 +19,9 @@ fieldset {
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 81px;
+    margin-top: 84px;
     &--reset {
-      font-size: 45px;
+      font-size: 42px;
       font-weight: 400;
       margin-bottom: 61px;
     }
@@ -97,6 +98,7 @@ small {
   input {
     border: 1px solid #cccdcd;
     border-radius: 3px;
+    font-size: 1rem;
     padding: 22px 5px 3px 10px;
     margin-bottom: 20px;
     width: -webkit-fill-available;
@@ -118,7 +120,7 @@ small {
     cursor: pointer;
     float: right;
     position: relative;
-    top: -47px;
+    top: -50px;
     right: 10px;
   }
 
@@ -181,6 +183,7 @@ small {
   button {
     background-color: #2a6ebb;
     margin: auto;
+    text-transform: inherit;
   }
 }
 
@@ -285,14 +288,26 @@ small {
 
 //Class's for dom manipulation
 .error-icon {
-  background-image: url(/images/error-icon.svg);
+  background-image: url(../images/error-icon.svg);
   background-repeat: no-repeat;
   margin-left: 11px;
   width: auto;
 }
 
+label.focus {
+  font-size: 10px;
+}
+
+input.focus {
+  color: red;
+}
+
 .focus {
   margin-top: -11px;
+
+  input {
+    font-size: 3rem;
+  }
 }
 
 small.error-icon {

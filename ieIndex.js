@@ -68,8 +68,8 @@ var checkConfirmPassword = function checkConfirmPassword() {
       "Password must has at least 8 characters that includes one number"
     );
   } else if (!hasNumber(password)) {
-    showError(passwordEl, "Password must contain atleast one number");
-    showError(confirmPasswordEl, "Password must contain atleast one number");
+    showError(passwordEl, "Password must contain at least one number");
+    showError(confirmPasswordEl, "Password must contain at least one number");
   } else if (password !== confirmedPassword) {
     showError(passwordEl, "Passwords do not match");
     showError(confirmPasswordEl, "Passwords do not match");

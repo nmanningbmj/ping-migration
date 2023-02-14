@@ -89,7 +89,7 @@ small {
   label {
     font-size: 14px;
     margin-left: 10px;
-    padding: 14px 0;
+    padding: 15px 0;
     position: absolute;
     transition-property: color, top, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -294,16 +294,20 @@ small {
   width: auto;
 }
 
+.error-input {
+  border: 2px solid #cd202c !important;
+}
+
 label.focus {
   font-size: 10px;
 }
 
 input.focus {
-  color: red;
+  color: #cd202c;
 }
 
 .focus {
-  margin-top: -11px;
+  margin-top: -8px;
 
   input {
     font-size: 3rem;

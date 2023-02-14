@@ -61,11 +61,11 @@ var checkConfirmPassword = function checkConfirmPassword() {
   } else if (!isPasswordValidated(password)) {
     showError(
       passwordEl,
-      "Password must has at least 8 characters that includes one number"
+      "Password must be at least 8 characters and include at least one number"
     );
     showError(
       confirmPasswordEl,
-      "Password must has at least 8 characters that includes one number"
+      "Password must be at least 8 characters and include at least one number"
     );
   } else if (!hasNumber(password)) {
     showError(passwordEl, "Password must contain at least one number");
@@ -103,11 +103,13 @@ var showError = function showError(input, message) {
   formField.classList.add("error");
 
   var error = formField.querySelector("small");
+  var input = formField.querySelector("input");
 
   error.textContent = message;
 
   if (formField.classList.contains("error")) {
     error.classList.add("error-icon");
+    input.classList.add("error-input");
   }
 
   const accessValidation = document.getElementById("accessValidation");
@@ -123,8 +125,11 @@ var showSuccess = function showSuccess(input) {
   var formField = input.parentElement;
   formField.classList.remove("error");
   var error = formField.querySelector("small");
+  var input = formField.querySelector("input");
+
   error.textContent = "";
   error.classList.remove("error-icon");
+  input.classList.remove("error-input");
 };
 
 //first step login page

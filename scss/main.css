@@ -122,6 +122,9 @@ small {
   transition-property: color, top, transform, -webkit-transform;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .bp-login-form input {
@@ -131,6 +134,7 @@ small {
   padding: 22px 5px 3px 10px;
   margin-bottom: 20px;
   width: -webkit-fill-available;
+  width: -moz-available;
   outline: none;
 }
 
@@ -334,6 +338,13 @@ small {
   position: relative;
   bottom: -11px;
   padding-bottom: 8px;
+}
+
+@-moz-document url-prefix() {
+  .step3 .form-field:last-of-type small {
+    padding-bottom: 12px;
+    top: 15px;
+  }
 }
 
 .error-icon {

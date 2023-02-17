@@ -93,6 +93,7 @@ small {
     position: absolute;
     transition-property: color, top, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
   }
 
   input {
@@ -102,6 +103,7 @@ small {
     padding: 22px 5px 3px 10px;
     margin-bottom: 20px;
     width: -webkit-fill-available;
+    width: -moz-available;
     outline: none;
 
     @include ie-only() {
@@ -283,6 +285,17 @@ small {
     position: relative;
     bottom: -11px;
     padding-bottom: 8px;
+  }
+
+  .form-field {
+    &:last-of-type {
+      small {
+        @-moz-document url-prefix() {
+          padding-bottom: 12px;
+          top: 15px;
+        }
+      }
+    }
   }
 }
 

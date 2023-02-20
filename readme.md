@@ -4,6 +4,11 @@ I've provided both ES6 and IE/Legacy compatitable scripts
 
 clone this project and open index.html with your browser or live server
 
+tickets:
+https://bmjtech.atlassian.net/browse/BP-4545
+https://bmjtech.atlassian.net/browse/BP-4546
+
+
 ## Using these files
 
 Take main.css for styles<br />

@@ -61,11 +61,11 @@ var checkConfirmPassword = function checkConfirmPassword() {
   } else if (!isPasswordValidated(password)) {
     showError(
       passwordEl,
-      "Password must has at least 8 characters that includes one number"
+      "Password must has at least 8 characters that includes one number (0-9), one uppercase letter (A-Z) and one symbol (e.g. #, $, /)"
     );
     showError(
       confirmPasswordEl,
-      "Password must has at least 8 characters that includes one number"
+      "Password must has at least 8 characters that includes one number (0-9), one uppercase letter (A-Z) and one symbol (e.g. #, $, /)"
     );
   } else if (!hasNumber(password)) {
     showError(passwordEl, "Password must contain atleast one number");
@@ -87,7 +87,9 @@ var isEmailValid = function isEmailValid(email) {
   return reg.test(email);
 };
 var isPasswordValidated = function isPasswordValidated(password) {
-  var re = new RegExp(/^(?=.*d).{8,}$/);
+  var re = new RegExp(
+    /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*()/])[a-zA-Z0-9!@#$%^&*()/]{8,}$/
+  );
   return re.test(password);
 };
 var hasNumber = function hasNumber(password) {

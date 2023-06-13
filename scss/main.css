@@ -217,9 +217,21 @@ small {
   line-height: 22px;
 }
 
+.reset-password__form-text ul {
+  display: inline-block;
+}
+
+.reset-password__form-text ul li:nth-child(2) {
+  margin-left: -10px;
+}
+
 .reset-password button {
   background-color: #2a6ebb;
   margin: auto;
+}
+
+.reset-password__form-validation-rules {
+  margin-bottom: 0;
 }
 
 .reset-pass-journey {

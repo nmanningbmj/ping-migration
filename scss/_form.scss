@@ -176,12 +176,24 @@ small {
   &__form-text {
     margin-top: 53px;
     line-height: 22px;
+
+    ul {
+      display: inline-block;
+
+      li:nth-child(2) {
+        margin-left: -10px;
+      }
+    }
   }
 
   button {
     background-color: #2a6ebb;
     margin: auto;
   }
+}
+
+.reset-password__form-validation-rules {
+  margin-bottom: 0;
 }
 
 .reset-pass-journey {

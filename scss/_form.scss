@@ -19,8 +19,9 @@ fieldset {
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 81px;
+    margin-top: 84px;
     &--reset {
-      font-size: 45px;
+      font-size: 42px;
       font-weight: 400;
       margin-bottom: 61px;
     }
@@ -88,18 +89,21 @@ small {
   label {
     font-size: 14px;
     margin-left: 10px;
-    padding: 14px 0;
+    padding: 15px 0;
     position: absolute;
     transition-property: color, top, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
   }
 
   input {
     border: 1px solid #cccdcd;
     border-radius: 3px;
+    font-size: 1rem;
     padding: 22px 5px 3px 10px;
     margin-bottom: 20px;
     width: -webkit-fill-available;
+    width: -moz-available;
     outline: none;
 
     @include ie-only() {
@@ -118,7 +122,7 @@ small {
     cursor: pointer;
     float: right;
     position: relative;
-    top: -47px;
+    top: -50px;
     right: 10px;
   }
 
@@ -189,6 +193,7 @@ small {
   button {
     background-color: #2a6ebb;
     margin: auto;
+    text-transform: inherit;
   }
 }
 
@@ -293,18 +298,45 @@ small {
     bottom: -11px;
     padding-bottom: 8px;
   }
+
+  .form-field {
+    &:last-of-type {
+      small {
+        @-moz-document url-prefix() {
+          padding-bottom: 12px;
+          top: 15px;
+        }
+      }
+    }
+  }
 }
 
 //Class's for dom manipulation
 .error-icon {
-  background-image: url(/images/error-icon.svg);
+  background-image: url(../images/error-icon.svg);
   background-repeat: no-repeat;
   margin-left: 11px;
   width: auto;
 }
 
+.error-input {
+  border: 2px solid #cd202c !important;
+}
+
+label.focus {
+  font-size: 10px;
+}
+
+input.focus {
+  color: #cd202c;
+}
+
 .focus {
-  margin-top: -11px;
+  margin-top: -8px;
+
+  input {
+    font-size: 3rem;
+  }
 }
 
 small.error-icon {

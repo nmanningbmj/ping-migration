@@ -372,3 +372,13 @@ small.error-icon {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+#formSubmissionErrorSecond {
+  margin-top: 1.875rem;
+  padding-bottom: 1.875rem;
+
+  a {
+    color: #2a6ebb;
+    text-decoration: none;
+  }
+}

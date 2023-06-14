@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stripe Login</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <img src="https://bestpractice.bmj.com/info/wp-content/themes/bmj-best-practice/images/BP-Logo-colour.svg"
+                alt="bmj bestpractice" class="bp-logo">
+            <div class="bp-login login-wrapper">
+                <div class="col-1">
+                    <h1 class="bp-login__header">Log in</h1>
+                    <p class="bp-login__desc">If you have a Best Practice personal account, your own subscription or
+                        have
+                        registered for a free trial, log in here: </p>
+
+                    <form action="#" class="bp-login-form" id="signIn">
+                        <fieldset>
+
+                            <div class="form-field">
+                                <small id="error1"></small>
+                                <div id="error-account-details"></div>
+                                <label for="email">Email</label>
+                                <input class=" email" id="email" name="email">
+                            </div>
+
+                            <div class="form-field">
+                                <small id="error2"></small>
+                                <label for=" password">Password</label>
+                                <input type="password" id="password" name="password">
+                                <span><button type="button" id="iconBtn"><img src="images/visibility_off.svg"
+                                            class="visibility-icon" alt="hide password"></button></span>
+                            </div>
+
+
+                            <div class="visibility-hidden"></div>
+
+                            <a class="bp-login__forgotPass" href="step1.html">Forgot password?</a>
+
+                            <button class="bp-login-form__button" id="formButton">log in</button>
+                        </fieldset>
+
+                        <div id="formSubmissionErrorSecond">If you are having difficulty logging in or need further
+                            assistance, please <a href="https://bestpractice.bmj.com/info/contact-us/">contact us</a>.
+                        </div>
+                        <div id="accessValidation" class="visibility-hidden-form" role="alert">
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="col-2">
+                    <img src="images/doctor.svg" alt="doctor">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="stripeLogin.js"></script>
+</body>
+
+</html>

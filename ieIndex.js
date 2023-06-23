@@ -196,9 +196,11 @@ var iconBtn = document.querySelectorAll("#iconBtn");
 var iconBtnSecond = document.querySelector("#iconBtnSecond");
 var inputPass = document.querySelector("#password");
 
-icon.addEventListener("click", function () {
-  visibilityIcon();
-});
+if(icon){
+  icon.addEventListener("click", function () {
+    visibilityIcon();
+  });
+}
 
 for (i = 0; i < iconBtn.length; i++) {
   iconBtn[i].addEventListener("keypress", function (event) {

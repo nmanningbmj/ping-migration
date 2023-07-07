@@ -223,11 +223,7 @@ small {
 }
 
 .reset-password__form-text ul {
-  display: inline-block;
-}
-
-.reset-password__form-text ul li:nth-child(2) {
-  margin-left: -10px;
+  list-style: none;
 }
 
 .reset-password button {

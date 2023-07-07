@@ -61,11 +61,11 @@ var checkConfirmPassword = function checkConfirmPassword() {
   } else if (!isPasswordValidated(password)) {
     showError(
       passwordEl,
-      "Password must has at least 8 characters that includes one number (0-9), one uppercase letter (A-Z) and one symbol (e.g. #, $, /)"
+      "Password must be at least 8 characters and include one number, one uppercase letter and one symbol"
     );
     showError(
       confirmPasswordEl,
-      "Password must has at least 8 characters that includes one number (0-9), one uppercase letter (A-Z) and one symbol (e.g. #, $, /)"
+      "Password must be at least 8 characters and include one number, one uppercase letter and one symbol"
     );
   } else if (!hasNumber(password)) {
     showError(passwordEl, "Password must contain at least one number");
@@ -196,7 +196,7 @@ var iconBtn = document.querySelectorAll("#iconBtn");
 var iconBtnSecond = document.querySelector("#iconBtnSecond");
 var inputPass = document.querySelector("#password");
 
-if(icon){
+if (icon) {
   icon.addEventListener("click", function () {
     visibilityIcon();
   });

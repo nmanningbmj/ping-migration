@@ -181,11 +181,7 @@ small {
     line-height: 22px;
 
     ul {
-      display: inline-block;
-
-      li:nth-child(2) {
-        margin-left: -10px;
-      }
+      list-style: none;
     }
   }
 

@@ -17,27 +17,9 @@ for (i = 0; i < formFields.length; i++) {
 }
 
 // Form validation
-var loginForm = document.querySelector("#signIn");
-var sendEmail = document.querySelector("#sendEmailLink");
-var updatePassword = document.querySelector("#updatePassword");
-var emailEl = document.querySelector("#email");
 var passwordEl = document.querySelector("#password");
 var confirmPasswordEl = document.querySelector("#SecondPwd");
 var errorIcon = document.getElementById("#error-icon");
-
-var validateEmail = function validateEmail() {
-  var valid = false;
-  var email = emailEl.value.trim();
-  if (!isRequired(email)) {
-    showError(emailEl, "Email cannot be blank.");
-  } else if (!isEmailValid(email)) {
-    showError(emailEl, "Email is not valid.");
-  } else {
-    showSuccess(emailEl, "");
-    valid = true;
-  }
-  return valid;
-};
 
 var validatePassword = function validatePassword() {
   var valid = false;
@@ -81,11 +63,6 @@ var checkConfirmPassword = function checkConfirmPassword() {
   return valid;
 };
 
-var isEmailValid = function isEmailValid(email) {
-  var reg =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return reg.test(email);
-};
 var isPasswordValidated = function isPasswordValidated(password) {
   var re = new RegExp(
     /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*()/])[a-zA-Z0-9!@#$%^&*()/]{8,}$/
@@ -113,14 +90,6 @@ var showError = function showError(input, message) {
     error.classList.add("error-icon");
     input.classList.add("error-input");
   }
-
-  const accessValidation = document.getElementById("accessValidation");
-
-  const fragment = document.createDocumentFragment();
-  const li = fragment.appendChild(document.createElement("li"));
-  li.innerHTML = message;
-
-  accessValidation.appendChild(fragment);
 };
 
 var showSuccess = function showSuccess(input) {
@@ -134,53 +103,9 @@ var showSuccess = function showSuccess(input) {
   input.classList.remove("error-input");
 };
 
-//first step login page
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var accessValidation = document.getElementById("accessValidation");
-    if (accessValidation.childNodes.length > 0) {
-      accessValidation.innerHTML = "";
-    }
-
-    var isEmailValid = validateEmail(),
-      isPasswordValid = validatePassword();
-    var isFormValid = isEmailValid && isPasswordValid;
-    if (isFormValid) {
-      console.log("valid");
-    }
-  });
-}
-
-//second step send email verification page
-if (sendEmail) {
-  sendEmail.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var accessValidation = document.getElementById("accessValidation");
-    if (accessValidation.childNodes.length > 0) {
-      accessValidation.innerHTML = "";
-    }
-
-    var isValid = validateEmail();
-    var isFormValid = isValid;
-    if (isFormValid) {
-      console.log("valid");
-    }
-  });
-}
-
-//final stage of reset password journey
 if (updatePassword) {
   updatePassword.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    var accessValidation = document.getElementById("accessValidation");
-    if (accessValidation.childNodes.length > 0) {
-      accessValidation.innerHTML = "";
-    }
-
     var isValid = checkConfirmPassword();
     var isFormValid = isValid;
     if (isFormValid) {
@@ -223,12 +148,6 @@ if (confirm) {
   });
 }
 
-var isMobileVersion = document.getElementsByClassName("accessi");
-
-// if 'hasClass' is exist on 'mydivclass'
-if (isMobileVersion.length > 0) {
-  console.log("test");
-}
 function visibilityIcon() {
   if (inputPass.type === "password") {
     icon.src = "images/visibility_on.svg";

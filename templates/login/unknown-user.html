@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password journey</title>
+    <link rel="stylesheet" href="../../scss/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="login-form__title">Log in to BMJ Best Practice</h1>
+
+            <div class="bp-login bs-login-wrapper">
+                <div class="bs-col">
+                    <p class="login-form__intro">If you have already created a BMJ Best Practice user profile, have
+                        your
+                        own subscription or have registered for a free trial, log in here: </p>
+
+                    <form action="#" class="bp-login-form" id="signIn">
+                        <fieldset>
+                            <div class="form-field">
+                                <small id="error1"></small>
+                                <label for="email">Email</label>
+                                <input class="email" id="email" name="email">
+                            </div>
+
+                            <div class="form-field">
+                                <small id="error2"></small>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password">
+                                <span><button type="button" id="iconBtn"><img src="../../images/visibility_off.svg"
+                                            class="visibility-icon" alt="hide password"></button></span>
+                            </div>
+
+
+                            <div class="visibility-hidden"></div>
+
+                            <a class="bp-login__forgotPass" href="templates/password-reset-journey/step1.html">Forgot
+                                password?</a>
+
+                            <button class="bp-login-form__button" id="formButton">Log in</button>
+                        </fieldset>
+
+                        <div id="formSubmissionErrorSecond">If you are having difficulty logging in or need further
+                            assistance, please <a href="https://bestpractice.bmj.com/info/contact-us/">contact us</a>.
+                        </div>
+                        <div id="accessValidation" class="visibility-hidden-form" role="alert">
+                        </div>
+
+                        <img class="subscription-bp__image--desktop" src="../../images/doctor.svg"
+                            alt="bp-illustration">
+                    </form>
+                </div>
+
+                <div class="bs-col">
+                    <div class="altLogin"><span>
+                            <div class="altLogin-grouping-nhs">
+                                <h2>Are you an NHS professional in England, Scotland or Wales?</h2>
+                                <p>BMJ Best Practice is now being provided to all NHS healthcare professionals in these
+                                    regions</p><a href="https://bestpractice.bmj.com/info/accessnhs"
+                                    class="bs-institution-login">Find out how to access for free</a>
+                            </div>
+                        </span>
+                        <h2 class="institution-title country-gb">Do you have access through your institution?</h2>
+                        <p>If your hospital, university or other institution provides access to BMJ Best Practice, they
+                            will have selected one of the following access methods:</p>
+                        <ul>
+                            <li>Open Athens or Shibboleth</li>
+                            <li>Access code</li>
+                            <li>Your institution's website or intranet</li>
+                            <li>Your institution's wifi or network</li>
+                        </ul><a href="https://bestpractice.bmj.com/info/access-through-your-institution/"
+                            class="bs-institution-login" data-test="lf-institution">Click here for access</a>
+                    </div>
+                </div>
+            </div>
+            <img class="subscription-bp__image" src="../../images/doctor.svg" alt="bp-illustration" loading="lazy">
+        </div>
+    </main>
+    <script src="../../js/ieIndex.js"></script>
+</body>
+
+</html>

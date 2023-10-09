@@ -224,8 +224,6 @@ if (confirm) {
 }
 
 var isMobileVersion = document.getElementsByClassName("accessi");
-
-// if 'hasClass' is exist on 'mydivclass'
 if (isMobileVersion.length > 0) {
   console.log("test");
 }

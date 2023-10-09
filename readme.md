@@ -12,6 +12,7 @@ https://bmjtech.atlassian.net/browse/BP-4546
 ## Using these files
 
 Take main.css for styles<br />
+Reset password journey<br />
 index.html for login page and reset password link<br />
 step1: enter email for verification link<br />
 step2: automated message from email<br />

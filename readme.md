@@ -1,4 +1,4 @@
-# Login page and reset password joureny
+# Ping
 
 I've provided both ES6 and IE/Legacy compatitable scripts
 

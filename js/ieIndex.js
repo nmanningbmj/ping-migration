@@ -231,11 +231,11 @@ if (isMobileVersion.length > 0) {
 }
 function visibilityIcon() {
   if (inputPass.type === "password") {
-    icon.src = "images/visibility_on.svg";
+    icon.src = "../../images/visibility_on.svg";
     icon.alt = "show password";
     inputPass.type = "text";
   } else {
-    icon.src = "images/visibility_off.svg";
+    icon.src = "../../images/visibility_off.svg";
     icon.alt = "hide password";
     inputPass.type = "password";
   }
@@ -243,11 +243,11 @@ function visibilityIcon() {
 
 function secondInputPass() {
   if (secondPass.type === "password") {
-    confirm.src = "images/visibility_on.svg";
+    confirm.src = "../../images/visibility_on.svg";
     confirm.alt = "show password";
     secondPass.type = "text";
   } else {
-    confirm.src = "images/visibility_off.svg";
+    confirm.src = "../../images/visibility_off.svg";
     confirm.alt = "hide password";
     secondPass.type = "password";
   }

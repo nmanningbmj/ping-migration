@@ -97,3 +97,13 @@
     width: 21.875rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .bp-login__header {
+    margin: 1rem 0;
+  }
+
+  .login-form__intro {
+    margin: 1rem 0;
+  }
+}

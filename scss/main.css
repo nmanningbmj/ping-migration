@@ -425,6 +425,70 @@ small.error-icon {
   text-decoration: none;
 }
 
+/* NEW Unknown user styles */
+.unknown-user-login .col-2 {
+  margin: revert;
+}
+
+.unknown-user-login .bp-login__desc {
+  margin-top: 0;
+  padding: 0;
+}
+
+.unknown-user-login .bp-login__header {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 991.5px) {
+  .unknown-user-login .col-1,
+  .col-2 {
+    width: 100%;
+  }
+}
+
+.altLogin {
+  background-color: #e5e6e6;
+  border-radius: 0.375rem;
+  padding: 1.5625rem 1.25rem;
+}
+
+.altLogin h2 {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4375rem;
+  margin-bottom: 1.4375rem;
+}
+
+@media (min-width: 992px) {
+  .altLogin {
+    margin: revert;
+    margin-bottom: auto;
+  }
+}
+
+.bs-institution-login {
+  background-color: #2a6ebb;
+  border-radius: 0.375rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.875rem;
+  padding: 0.75rem 1rem;
+  line-height: 1.375rem;
+  text-decoration: none;
+}
+
+.subscription-bp__image {
+  padding-top: 2.875rem;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* NEW Unknown user styles ENDS HERE*/
 .bs-login-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,67 +515,23 @@ small.error-icon {
   }
 }
 
-.login-form__title {
+.bp-login__header {
   font-size: 1.875rem;
   font-weight: 400;
   margin-bottom: 0;
 }
 
 @media (min-width: 992px) {
-  .login-form__title {
+  .bp-login__header {
     font-size: 2.5rem;
     margin-top: 4.125rem !important;
   }
 }
 
-.login-form__intro {
+.bp-login__desc {
   font-weight: 400;
   margin-top: 2.875rem;
   margin-bottom: 60px;
-}
-
-.altLogin {
-  background-color: #e5e6e6;
-  border-radius: 0.375rem;
-  padding: 1.5625rem 1.25rem;
-  margin: 0 0 2.75rem 0;
-}
-
-.altLogin h2 {
-  color: #333;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.4375rem;
-  margin-bottom: 1.4375rem;
-}
-
-@media (min-width: 992px) {
-  .altLogin {
-    margin: revert;
-    margin-bottom: auto;
-    margin-top: 3.0625rem;
-  }
-}
-
-.bs-institution-login {
-  background-color: #2a6ebb;
-  border-radius: 0.375rem;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 1.5rem;
-  margin-bottom: 1.875rem;
-  padding: 0.75rem 1rem;
-  line-height: 1.375rem;
-  text-decoration: none;
-}
-
-.subscription-bp__image {
-  padding-top: 2.875rem;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 @media only screen and (max-width: 992px) {
@@ -541,11 +561,11 @@ small.error-icon {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991.5px) {
   .bp-login__header {
     margin: 1rem 0;
   }
-  .login-form__intro {
+  .bp-login__desc {
     margin: 1rem 0;
   }
 }
